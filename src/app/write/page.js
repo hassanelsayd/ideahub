@@ -7,7 +7,7 @@ import { v4 as uuid } from "uuid";
 import styles from "./write.module.css";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-const page = () => {
+const WritePage = () => {
   const router = useRouter();
   const [value, setValue] = useState("");
   const [expand, setExpand] = useState(false);
@@ -129,4 +129,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default WritePage;
