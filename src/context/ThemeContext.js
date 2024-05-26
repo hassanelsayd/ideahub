@@ -4,7 +4,7 @@ import { createContext, useEffect, useState } from "react";
 export const ThemeContext = createContext();
 
 const getFromLocalStorage = () => {
-  if (window !== undefined) {
+  if (typeof window !== "undefined") {
     const value = window.localStorage.getItem("theme");
     return value || "light";
   }
