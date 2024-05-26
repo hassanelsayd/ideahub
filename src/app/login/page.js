@@ -2,7 +2,7 @@
 import styles from "./login.module.css";
 import { signIn } from "next-auth/react";
 import { useAuthContext } from "@/context/AuthContext";
-import Loading from "../components/Loading/loading";
+import Loading from "../components/Loading/Loading";
 
 const LoginPage = () => {
   const { authData } = useAuthContext();

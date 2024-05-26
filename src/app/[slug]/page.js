@@ -16,7 +16,7 @@ const SingleBlog = () => {
     if (posts !== undefined) {
       setCurrentPost(posts?.filter((post) => String(post.postId) === slug));
     }
-  }, [posts]);
+  }, [posts, slug]);
 
   // console.log(userData);
   console.log(posts);
