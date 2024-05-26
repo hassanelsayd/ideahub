@@ -1,0 +1,17 @@
+.content {
+  display: flex;
+  gap: 50px;
+}
+.blogType {
+  padding: 20px 30px;
+  background-color: var(--bg-secondary);
+  width: max-content;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 15px;
+  font-weight: 600;
+  margin: 20px 0;
+}

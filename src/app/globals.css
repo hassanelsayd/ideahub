@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+  --btn-bg: #07c9bf;
+  --bg-secondary: #eee;
+  --soft-text: #222;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.dark {
+  --bg-color: #222;
+  --text-color: #fff;
+  --btn-bg: #454545;
+  --bg-secondary: #393939;
+  --soft-text: #e7e7e7;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.container {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.wrapper {
+  max-width: 1536px;
+  margin: 0 auto;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+/* edit quill editor */
+.ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-options {
+  background-color: var(--bg-secondary);
+}
+.ql-snow .ql-picker.ql-header {
+  color: var(--text-color);
+}
+.ql-snow .ql-stroke {
+  stroke: var(--text-color) !important;
+}
+.quill > .ql-container > .ql-editor.ql-blank::before {
+  font-size: 20px;
+  color: var(--text-color);
+}
+@media (max-width: 1536px) {
+  .wrapper {
+    max-width: 1366px;
+  }
+}
+@media (max-width: 1366px) {
+  .wrapper {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 1024px) {
+  .wrapper {
+    max-width: 768px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper {
+    max-width: 640px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 640px) {
+  .wrapper {
+    max-width: 475px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

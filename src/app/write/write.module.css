@@ -1,0 +1,105 @@
+.container {
+  padding: 50px 0;
+}
+.title {
+  background-color: transparent;
+  font-size: 30px;
+  border: 0;
+  color: var(--soft-text);
+  font-weight: 600;
+}
+.title:focus {
+  outline: none;
+}
+.title::placeholder {
+  color: var(--soft-text);
+  font-weight: 600;
+}
+.assets {
+  display: flex;
+  gap: 50px;
+  margin: 50px 0;
+}
+.button,
+.addButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid var(--bg-secondary);
+  position: relative;
+}
+.addButton input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.button img {
+  object-fit: cover;
+}
+.addButtons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+.textEditor {
+  height: 50vh;
+  position: relative;
+}
+.editor {
+  margin-bottom: 70px;
+}
+.publish {
+  background-color: #238636;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  border: 0;
+  padding: 10px;
+  border-radius: 5px;
+  min-width: 150px;
+}
+
+/* Spinner */
+
+/* Spinner */
+.ldsDualRing {
+  /* change color here */
+  color: var(--btn-text);
+}
+.ldsDualRing,
+.ldsDualRing:after {
+  box-sizing: border-box;
+}
+.ldsDualRing {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+.ldsDualRing:after {
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 3px solid currentColor;
+  border-color: currentColor transparent currentColor transparent;
+  animation: ldsDualRing 1.2s linear infinite;
+}
+@keyframes ldsDualRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
