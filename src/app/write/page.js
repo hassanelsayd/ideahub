@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
@@ -7,6 +7,7 @@ import { v4 as uuid } from "uuid";
 import styles from "./write.module.css";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+
 const WritePage = () => {
   const router = useRouter();
   const [value, setValue] = useState("");
@@ -14,9 +15,15 @@ const WritePage = () => {
   const [base64Image, setBase64Image] = useState();
   const [title, setTitle] = useState("");
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    // Code that should only run on the client side can be placed here
+  }, []);
+
   const onValueChange = (content) => {
     setValue(content);
   };
+
   const onTitleChange = (e) => {
     setTitle(e.target.value);
   };
@@ -62,6 +69,7 @@ const WritePage = () => {
         console.log(err);
       });
   };
+
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -72,6 +80,7 @@ const WritePage = () => {
       };
     }
   };
+
   return (
     <div className={styles.container}>
       <input
@@ -89,7 +98,6 @@ const WritePage = () => {
           <div className={styles.addButtons}>
             <button className={styles.addButton}>
               <input type="file" name="file" onChange={handleImageChange} />
-
               <Image src="/image.png" width={20} height={20} alt="image" />
             </button>
             <button className={styles.addButton}>
