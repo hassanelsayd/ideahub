@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
@@ -15,10 +15,6 @@ const WritePage = () => {
   const [base64Image, setBase64Image] = useState();
   const [title, setTitle] = useState("");
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    // Code that should only run on the client side can be placed here
-  }, []);
 
   const onValueChange = (content) => {
     setValue(content);
