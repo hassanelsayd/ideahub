@@ -1,14 +1,19 @@
 "use client";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
-// import ReactQuill from "react-quill";
-// import "react-quill/dist/quill.snow.css";
+import "react-quill/dist/quill.snow.css";
 import { v4 as uuid } from "uuid";
 import styles from "./write.module.css";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import dynamic from "next/dynamic";
 
 const WritePage = () => {
+  const ReactQuill = useMemo(
+    () => dynamic(() => import("react-quill"), { ssr: false }),
+    []
+  );
+
   const router = useRouter();
   const [value, setValue] = useState("");
   const [expand, setExpand] = useState(false);
@@ -111,14 +116,14 @@ const WritePage = () => {
         )}
       </div>
       <div className={styles.editor}>
-        {/* <ReactQuill
+        <ReactQuill
           theme="snow"
           value={value}
           onChange={onValueChange}
           className={styles.textEditor}
           placeholder="Fill free to write what you want..."
           modules={modules}
-        /> */}
+        />
       </div>
       {loading ? (
         <button className={styles.publish}>
